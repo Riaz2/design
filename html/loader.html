@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/icons/icon.png" type="image/x-icon">
+    <title>Loader</title>
+    <style>
+    body {
+        background: blanchedalmond;
+        margin: 0;
+        padding: 0;
+    }
+    /*Animated CSS Clock*/
+
+    .clock {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        border: 15px solid #ff5f5f;
+        border-radius: 50%;
+        background: url(../img/bg.png);
+        background-size: cover;
+        box-shadow: -2px 2px 0 #e23232,
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .clock:before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 3px);
+        left: 50%;
+        width: 40%;
+        height: 6px;
+        background: #262626;
+        border-radius: 3px;
+        animation: animate 4s linear infinite;
+        transform-origin: left;
+    }
+
+    .clock:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 3px);
+        left: 50%;
+        width: 30%;
+        height: 6px;
+        background: #262626;
+        border-radius: 3px;
+        animation: animate 48s linear infinite;
+        transform-origin: left;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background: #ff5f5f;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(-90deg);
+        }
+        100% {
+            transform: rotate(270deg);
+        }
+    }
+
+    .clock-title {
+        position: absolute;
+        top: 40%;
+        left: 14%;
+    }
+    /*Animated CSS Heart*/
+
+    .heart {
+        width: 180px;
+        height: 100px;
+        position: absolute;
+        top: 20%;
+        right: 18%;
+        background: #ff3e3e;
+        transition: 1s;
+        transform-origin: right bottom;
+    }
+
+    .heart:before {
+        content: 'Hover Me';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transition: 2s;
+        transform-origin: right bottom;
+    }
+
+    .heart:hover {
+        transform: rotate(45deg);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .heart:hover:before {
+        transform: rotate(450deg) translateY(100px);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        background: #e22c2c;
+        content: '';
+    }
+
+    .heart-title {
+        position: absolute;
+        top: 40%;
+        right: 13%;
+    }
+    /*Pure CSS Cartoon Character*/
+
+    .wrapper {
+        width: 450px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 200px;
+    }
+
+    .wrapper .main-face {
+        position: absolute;
+        width: 200px;
+        height: 230px;
+        background-color: #1e4063;
+        transform: translateX(-50%);
+        left: 50%;
+        border-radius: 0 0 100px 100px;
+    }
+
+    .wrapper .main-face .p1 {
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        background-color: #fdc844;
+        top: -80px;
+        left: -57px;
+        transform: rotate(-45deg);
+        border-radius: 100px 100px 0 0;
+        z-index: 2;
+    }
+
+    .wrapper .main-face .p2 {
+        position: absolute;
+        width: 182px;
+        height: 80px;
+        background-color: #e6993f;
+        transform: rotate(39deg);
+        top: -69px;
+        right: -46px;
+        border-radius: 100px 100px 0 0;
+        z-index: 1;
+    }
+
+    .wrapper .main-face .ear-1,
+    .wrapper .main-face .ear-2 {
+        position: absolute;
+        width: 36px;
+        height: 53px;
+        background-color: #BA6453;
+    }
+
+    .wrapper .main-face .ear-1 {
+        top: 60px;
+        left: -36px;
+        border-radius: 30px 0 0 30px;
+    }
+
+    .wrapper .main-face .ear-2 {
+        right: -35px;
+        top: 60px;
+        border-radius: 0 30px 30px 0;
+    }
+
+    .wrapper .main-face .mouth {
+        position: absolute;
+        width: 120px;
+        height: 60px;
+        background-color: #cc4452;
+        left: 50%;
+        bottom: 66px;
+        border-radius: 0 0 100px 100px;
+        overflow: hidden;
+        transform: translateX(-50%);
+    }
+
+    .wrapper .main-face .mouth .m-line {
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        background-color: #fff;
+    }
+
+    .wrapper .main-face .mouth .m-round {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #f36863;
+        left: 50%;
+        top: 32px;
+        transform: translateX(-50%);
+    }
+
+    .wrapper .main-face .eyes-w {
+        position: absolute;
+        width: 168px;
+        height: 65px;
+        background-color: #c37f6a;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .wrapper .main-face .eyes-w .eye-1,
+    .wrapper .main-face .eyes-w .eye-2 {
+        position: absolute;
+        width: 32px;
+        height: 20px;
+        background-color: #934129;
+        top: 16px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .wrapper .main-face .eyes-w .eye-1 {
+        left: 30px;
+    }
+
+    .wrapper .main-face .eyes-w .eye-2 {
+        right: 30px;
+    }
+
+    .wrapper .main-face .nose {
+        position: absolute;
+        width: 42px;
+        height: 43px;
+        background-color: #bc664c;
+        left: 50%;
+        top: 31px;
+        border-radius: 40px 40px 0 0;
+        z-index: 3;
+        transform: translateX(-50%);
+    }
+
+    .wrapper .main-face .eyes-bdr {
+        position: absolute;
+        width: 185px;
+        height: 30px;
+        top: 50px;
+        background-color: #1e4063;
+        border-radius: 70px 70px 0 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .wrapper .main-body {
+        position: absolute;
+        width: 260px;
+        height: 110px;
+        background-color: #47d9d6;
+        left: 50%;
+        border-radius: 200px 200px 0 0;
+        top: 180px;
+        z-index: -1;
+        overflow: hidden;
+        transform: translateX(-50%);
+    }
+
+    .wrapper .main-body .main-body-line-l,
+    .wrapper .main-body .main-body-line-r {
+        position: absolute;
+        width: 55px;
+        height: 150px;
+        background-color: #f26762;
+    }
+
+    .wrapper .main-body .main-body-line-l {
+        left: 40px;
+    }
+
+    .wrapper .main-body .main-body-line-r {
+        right: 40px;
+    }
+
+    .crtn {
+        text-align: center;
+    }
+
+    button {
+        position: absolute;
+        top: 600px;
+        width: 100%;
+        font-size: 6rem;
+        height: 300px;
+        background: #8BC34A;
+        text-shadow: 4px 3px 0px #E91E63;
+        color: #2196F3;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #795548;
+        border-radius: 50%;
+        transition: all 1s ease-in-out;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="heart"></div>
+    <h3 class="heart-title">Animated CSS Heart</h3>
+    <div class="clock"><span></span></div>
+    <h3 class="clock-title">CSS Animated Clock</h3>
+    <h3 class="crtn">Pure CSS Cartoon Character</h3>
+    <div class="wrapper">
+        <div class="main-face">
+            <div class="p1"></div>
+            <div class="p2"></div>
+            <div class="ear-1"></div>
+            <div class="ear-2"></div>
+            <div class="mouth">
+                <div class="m-line"></div>
+                <div class="m-round"></div>
+            </div>
+            <div class="eyes-w">
+                <div class="eye-1"></div>
+                <div class="eye-2"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="eyes-bdr"></div>
+        </div>
+        <div class="main-body">
+            <div class="main-body-line-l"></div>
+            <div class="main-body-line-r"></div>
+        </div>
+    </div>
+    <a href="../index.html">
+        <button>Enter To The Site</button>
+    </a>
+</body>
+
+</html>

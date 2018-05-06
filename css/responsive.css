@@ -1,0 +1,106 @@
+@media only screen and (max-width: 1050px) {
+    .feature-col {
+        width: 90%;
+    }
+    .feature-col p {
+        font-size: 25px;
+    }
+    .featured-article-wrapper .col-article {
+        float: none;
+        width: 100%;
+    }
+    .featured-article-wrapper .img-responsive {
+        width: -webkit-fill-available;
+    }
+    .featured-article-wrapper .highlight-2 {
+        font-size: 30px;
+    }
+    .services-wrapper {
+        margin-top: 65%;
+    }
+    .team-wrapper {
+        height: auto;
+    }
+    .featured-article-wrapper h3 {
+        font-size: 50px;
+    }
+    .contact-details .info {
+        font-size: 1.5em;
+    }
+    .footer-col {
+        width: 80%;
+    }
+    .footer-last .r-col {
+        margin-right: 0;
+    }
+    div.services-col {
+        width: 45%;
+    }
+
+    .col-team {
+        float: none;
+        width: 100%;
+    }
+    .team-member {
+        max-width: 600px;
+    }
+    .team-member .img-responsive {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    label {
+        display: block;
+    }
+    #nav {
+        display: none;
+    }
+    #toggle:checked+#nav {
+        display: block;
+        cursor: pointer;
+    }
+    #toggle:checked+#nav li {
+        float: none;
+        display: block;
+    }
+    #nav li a {
+        font-size: 35px;
+        margin-left: 200px;
+        width: 210px;
+    }
+    #nav li #myDropdown a {
+        margin-left: 0;
+        width: 100%;
+    }
+    .search {
+        position: absolute;
+        right: 15px;
+        left: unset;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .nav-wrapper {
+        margin-left: 3%;
+        width: 60%;
+    }
+    #nav li a {
+        padding-right: 28px;
+        padding-left: 20px;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .feature-col {
+        width: 50%;
+        float: none;
+        padding: 30px;
+        margin: 0 auto;
+    }
+    .feature-col p {
+        font-size: 20px;
+    }
+    .features-wrapper {
+        height: fit-content;
+    }
+}
